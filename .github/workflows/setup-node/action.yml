@@ -13,18 +13,19 @@ jobs:
         with:
           node-version: '18'
       
-      - name: Cache dependencies
-        id: cache_dependencies
-        uses: actions/cache@v3
-        with: path: node_modules # npm cache files are stored in `~/.npm` on Linux/macOS
-              key: node_modules_${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}  # Use hash of package-lock.json for the key
-              restore-keys: |
-                ${{ runner.os }}-build-
-                ${{ runner.os }}-
+      # - name: Cache dependencies
+      #   id: cache_dependencies
+      #   uses: actions/cache@v3
+      #   with: path: node_modules # npm cache files are stored in `~/.npm` on Linux/macOS
+      #         key: node_modules_${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}  # Use hash of package-lock.json for the key
+      #         restore-keys: |
+      #           ${{ runner.os }}-build-
+      #           ${{ runner.os }}-
 
 
       - name: Install Dependencies
-        shell: bash
-        if: steps.cache_dependencies.outputs.cache-hit!= 'true'
-        run: npm ci
+        # shell: bash
+        # if: steps.cache_dependencies.outputs.cache-hit!= 'true'
+        # run: npm ci
+        run: npm install
       
