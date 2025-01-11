@@ -2,7 +2,6 @@ import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    // <div className="flex min-h-screen flex-col items-center p-24 bg-white-to-yellow">
     <div className="flex min-h-screen flex-col items-center p-24 bg-white">
       <h1 className="font-bold pb-12 font-serif text-blue-900 text-6xl">Sushobhith Sharma</h1>
       <div className="text-center p-4 max-w-lg">
@@ -18,8 +17,6 @@ export default function Home() {
           During this trip I have learned surfing, discovered an unknown waterfall at 3800ft and became a certified yoga teacher.
         </p>
       </div>
-      {/* <div className="flex flex col items-center justify-center">
-      </div> */}
       <div className="flex items-center justify-center space-x-6 pt-24">
         {/* Twitter */}
         <a
