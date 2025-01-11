@@ -7,12 +7,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          # This makes Actions fetch all Git history so that Changes to package-lock.json trigger the workflow.
-          fetch-depth: 0
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
