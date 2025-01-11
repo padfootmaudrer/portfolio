@@ -1,0 +1,26 @@
+name: setup-node
+
+on:
+  workflow_call:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Cache dependencies
+        id: cache_dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules_${{hashFiles('package-lock.json')}}
+
+      - name: Install Dependencies
+        shell: bash
+        if: steps.cache_dependencies.outputs.cache-hit!= 'true'
+        run: npm ci
+      

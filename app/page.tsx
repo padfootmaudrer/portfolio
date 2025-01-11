@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
@@ -8,10 +7,10 @@ export default function Home() {
       <h1 className="font-bold pb-12 font-serif text-blue-900 text-6xl">Sushobhith Sharma</h1>
       <div className="text-center p-4 max-w-lg">
         <p className="text-lg leading-relaxed">
-          I'm a software engineer. 
+          I&apos;m a software engineer. 
           <br />
           Most recently I was working as Senior Software Engineer at Juspay, a global payments startup based out of India. 
-          I've spent several years helping scale Juspay from a small startup to a Billion dollar company. 
+          I&apos;ve spent several years helping scale Juspay from a small startup to a Billion dollar company. 
           <br /><br />
           I focus my time these days on helping other startups and building one of my own! 
           <br /><br />

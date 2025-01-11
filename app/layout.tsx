@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sushobhith Sharma",
   description: "",
+  icons: {
+    icon:'/my-new-favicon.ico',
+  },
 };
 
 export default function RootLayout({
