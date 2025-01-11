@@ -3,7 +3,7 @@ name: publish-to-github-pages
 on:
   push:
     branches:
-      - revamp-deploy
+      - main
 
 permissions:
   contents: read
